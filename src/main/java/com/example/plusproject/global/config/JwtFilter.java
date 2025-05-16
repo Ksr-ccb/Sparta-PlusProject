@@ -1,4 +1,4 @@
-package com.example.plusproject.config;
+package com.example.plusproject.global.config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.example.expert.domain.user.enums.UserRole;
+import com.example.plusproject.domain.user.enums.UserRole;
 
 import java.io.IOException;
 

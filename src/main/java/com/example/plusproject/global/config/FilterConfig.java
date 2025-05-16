@@ -1,4 +1,4 @@
-package com.example.plusproject.config;
+package com.example.plusproject.global.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
