@@ -1,4 +1,4 @@
-package com.example.plusproject.config;
+package com.example.plusproject.global.config;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Component;

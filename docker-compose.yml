@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  nbc-jpa-plus_mysql:
+    image: mysql:8.0.35
+
+    platform: linux/amd64
+    volumes:
+      - nbc-jpa-plus_mysql_volume:/data
+    ports:
+      - '13306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: mysqlpassword3306
+      MYSQL_DATABASE: plus-project
+    command:
+      [ 'mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci', '--lower_case_table_names=1' ]
+
+  nbc-jpa-plus_redis:
+    image: redis:7.2
+    ports:
+      - '6379:6379'
+    volumes:
+      - nbc-jpa-plus_redis_volume:/data
+    command: redis-server --requirepass redispassword6379 --appendonly yes
+
+volumes:
+  nbc-jpa-plus_mysql_volume:
+  nbc-jpa-plus_redis_volume:

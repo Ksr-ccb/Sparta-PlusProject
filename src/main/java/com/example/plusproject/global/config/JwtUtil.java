@@ -1,5 +1,8 @@
-package com.example.plusproject.config;
+package com.example.plusproject.global.config;
 
+import com.example.plusproject.domain.user.enums.UserRole;
+import com.example.plusproject.global.common.exception.CommonException;
+import com.example.plusproject.global.common.exception.CommonExceptionCode;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -10,7 +13,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
-import java.rmi.ServerException;
 import java.security.Key;
 import java.util.Base64;
 import java.util.Date;
@@ -52,7 +54,7 @@ public class JwtUtil {
         if (StringUtils.hasText(tokenValue) && tokenValue.startsWith(BEARER_PREFIX)) {
             return tokenValue.substring(7);
         }
-        throw new ServerException("Not Found Token");
+        throw new CommonException(CommonExceptionCode.NOT_FOUND_TOKEN);
     }
 
     public Claims extractClaims(String token) {

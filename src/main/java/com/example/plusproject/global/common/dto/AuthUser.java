@@ -1,4 +1,4 @@
-package com.example.plusproject.global.dto;
+package com.example.plusproject.global.common.dto;
 
 import com.example.plusproject.domain.user.enums.UserRole;
 import lombok.Getter;
