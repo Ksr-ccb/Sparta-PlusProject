@@ -1,6 +1,5 @@
 package com.example.plusproject.domain.coupon.exception;
 
-import com.example.plusproject.domain.user.exception.UserExceptionCode;
 import com.example.plusproject.global.exception.BaseException;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
