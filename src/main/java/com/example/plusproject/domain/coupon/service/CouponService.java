@@ -10,7 +10,7 @@ import com.example.plusproject.domain.coupon.repository.CouponHistoryRepository;
 import com.example.plusproject.domain.coupon.repository.CouponRepository;
 import com.example.plusproject.domain.user.entity.User;
 import com.example.plusproject.global.common.dto.AuthUser;
-import com.example.plusproject.global.common.exception.CommonException;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
