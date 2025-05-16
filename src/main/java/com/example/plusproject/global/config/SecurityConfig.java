@@ -38,7 +38,7 @@ public class SecurityConfig {
                 // [4] URL별 권한 설정
                 .authorizeHttpRequests(auth-> auth
                         // [5] 인증/인가 정책 설정
-                        .requestMatchers("/auth/**", "/actuator/**").permitAll()
+                        .requestMatchers("/api/v1/auth/**").permitAll()
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
